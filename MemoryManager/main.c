@@ -27,6 +27,75 @@ struct Data {
     struct Configuracoes* conf;
 };
 
+struct CacheLine {
+    int valid;
+    int tag;
+    int data;
+};
+
+struct CacheSet {
+    struct CacheLine* lines;
+    int index;
+    char _[4];
+};
+
+struct Cache {
+    struct CacheSet* sets;
+    unsigned int sets_len;
+    unsigned int lines_len;
+    unsigned int line_size;
+    unsigned int size;
+};
+
+struct Cache* digest_cache(struct Data* data) {
+    struct Cache* cache = (struct Cache*) calloc(1, sizeof(struct Cache));
+    if (!cache) {
+        printf("\nnao foi possivel alocar memoria");
+        return 0;
+    }
+
+    cache->size = data->entradas->cache_size;
+    cache->line_size = data->entradas->bloc_size;
+    cache->lines_len = data->conf->associativity;
+    cache->sets_len = cache->size / cache->line_size / data->conf->associativity;
+
+    cache->sets = (struct CacheSet*) calloc(cache->sets_len, sizeof(struct CacheSet));
+
+    for (unsigned int i = 0; i < cache->sets_len; i++) {
+        cache->sets[i].lines = (struct CacheLine*)calloc(cache->lines_len, sizeof(struct CacheLine));
+        if (!cache->sets[i].lines) {
+            printf("\nnao foi possivel alocar memoria");
+            return 0;
+        }
+    }
+    return cache;
+}
+
+char* parseBinary(int val) {
+    char tmp[64] = {0};
+    if (!tmp) {
+        printf("\nnao foi possivel alocar memoria");
+        return 0;
+    }
+
+    int aux = 0;
+    for (int amount = val % 2; val != 0; amount = val % 2) {
+        val /= 2;
+        tmp[aux++] = '0' + (char) amount;
+    }
+
+    char* parsed = (char*) calloc(aux+1, sizeof(char));
+    if (!tmp) {
+        printf("\nnao foi possivel alocar memoria");
+        return 0;
+    }
+
+    int i = 0;
+    for (char* c = tmp; *c; parsed[aux - ++i] = *c++);
+
+    return parsed;
+}
+
 struct Data* load_data(const char* file_name) {
 
     struct Configuracoes* conf = (struct Configuracoes*)calloc(1, sizeof(struct Configuracoes));
@@ -50,7 +119,7 @@ struct Data* load_data(const char* file_name) {
     }
 
     arq = fopen(file_name, "r");
-    if (arq == 0) {
+    if (!arq) {
         printf("\nnao foi possivel abrir o arquivo");
         return 0;
     }
@@ -95,19 +164,9 @@ void process(struct Data *data) {
     }
 }
 
-int read() {
-
-}
-
-int write() {
-
-}
-
 void main(void) {
     struct Data *data;
     data = load_data("data.txt");
-    char* cache = (char*)calloc(1, data->entradas->bloc_size);
-
 
     printf(
         "%i %i %i %s %s %s %i %i %i",
@@ -121,6 +180,8 @@ void main(void) {
         data->entradas->trm,
         data->entradas->twm
     );
+
+    printf("\n%s", parseBinary(75));
 
     free(data);
 }
