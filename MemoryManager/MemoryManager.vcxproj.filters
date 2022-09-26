@@ -23,56 +23,5 @@
     <None Include="data.txt">
       <Filter>Arquivos de Recurso</Filter>
     </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\1.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\2.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\3.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\4.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\5.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\6.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\7.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\8.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\9.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\10.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\11.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\12.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\13.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\14.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\testAllocation.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\testCoherence.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\testReplacement.in">
-      <Filter>Arquivos de Recurso</Filter>
-    </None>
   </ItemGroup>
 </Project>

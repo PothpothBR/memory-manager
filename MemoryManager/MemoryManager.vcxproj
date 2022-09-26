@@ -132,23 +132,6 @@
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\1.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\10.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\11.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\12.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\13.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\14.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\2.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\3.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\4.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\5.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\6.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\7.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\8.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\9.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\testAllocation.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\testCoherence.in" />
-    <None Include="..\..\..\..\Desktop\EntradasSaidas\Entradas\testReplacement.in" />
     <None Include="data.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
